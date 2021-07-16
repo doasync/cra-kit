@@ -56,7 +56,7 @@ const config = {
       },
     },
     {
-      files: ['src/**/*.tsx'],
+      files: ['src/**/*.jsx', 'src/**/*.tsx'],
       rules: {
         '@typescript-eslint/explicit-module-boundary-types': 'off',
       },
