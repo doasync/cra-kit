@@ -1,8 +1,10 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './app.css';
 
-function App() {
+import React from 'react';
+
+import logo from './logo.svg';
+
+export function App() {
   return (
     <div className="App">
       <header className="App-header">
@@ -22,5 +24,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

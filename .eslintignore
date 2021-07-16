@@ -1,0 +1,63 @@
+# Configs
+.madgerc
+.yarnclean
+.editorconfig
+.gitattributes
+.browserslistrc
+.nvmrc
+
+# Assets
+*.*ignore
+*.ico
+*.jpg
+*.png
+*.gif
+*.svg
+*.woff2
+*.ttf
+*.txt
+*.pb
+
+# TypeScript
+.typescript
+
+# Dependencies
+node_modules
+
+# Lock files
+package-lock.json
+yarn.lock
+
+# Build files
+build
+dist
+
+# Misc
+.coverage
+.temp
+.npm
+.cache
+.*-cache
+
+# DotEnv
+.env
+
+# VSCode
+.vscode
+
+# WebStorm
+.idea
+
+# System
+*.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+ehthumbs.db
+*.lnk
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
