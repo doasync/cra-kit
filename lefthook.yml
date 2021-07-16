@@ -1,0 +1,14 @@
+skip_output:
+  - meta
+  - success
+pre-commit:
+  commands:
+    yarn:
+      run: yarn
+    tsc:
+      run: tsc -p tsconfig.json
+    eslint:
+      glob: '*.{js,jsx,ts,tsx}'
+      run: eslint --fix {staged_files}
+    prettier:
+      run: prettier --write {staged_files}

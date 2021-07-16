@@ -16,7 +16,7 @@
     "ts-files": "tsc --listFiles -p tsconfig.json",
     "codestyle": "prettier --check '**/*'",
     "format": "prettier --write '**/*'",
-    "eslint": "eslint '**/*.{js,jsx,ts,tsx,mdx}'",
+    "eslint": "eslint '**/*.{js,jsx,ts,tsx}'",
     "lint": "yarn eslint",
     "qa": "yarn ts && yarn lint && yarn codestyle",
     "fix": "yarn eslint --fix"
@@ -40,6 +40,7 @@
     ]
   },
   "devDependencies": {
+    "@arkweid/lefthook": "^0.7.6",
     "@testing-library/dom": "^7.21.4",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",

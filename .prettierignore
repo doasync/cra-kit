@@ -30,9 +30,9 @@ yarn.lock
 
 # Build files
 build
-dist
 
 # Misc
+.husky
 .coverage
 .temp
 .npm
