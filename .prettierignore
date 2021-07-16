@@ -1,10 +1,10 @@
 # Configs
-.madgerc
 .yarnclean
 .editorconfig
 .gitattributes
 .browserslistrc
 .nvmrc
+.madgerc
 
 # Assets
 *.*ignore
@@ -18,35 +18,31 @@
 *.txt
 *.pb
 
-# TypeScript
-.typescript
-
 # Dependencies
 node_modules
+
+# DotEnv
+.env
 
 # Lock files
 package-lock.json
 yarn.lock
 
+# IDE
+.vscode
+.idea
+
 # Build files
 build
+coverage
+typescript
 
 # Misc
 .husky
-.coverage
 .temp
 .npm
 .cache
 .*-cache
-
-# DotEnv
-.env
-
-# VSCode
-.vscode
-
-# WebStorm
-.idea
 
 # System
 *.DS_Store

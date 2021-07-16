@@ -7,37 +7,24 @@
     "react-dom": "^17.0.2",
     "web-vitals": "^1.0.1"
   },
+  "engineStrict": true,
+  "engines": {
+    "node": "12.22.3"
+  },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
+    "start": "cross-env NODE_ENV=development react-scripts start",
+    "build": "cross-env NODE_ENV=production react-scripts build",
+    "test": "cross-env NODE_ENV=test react-scripts test",
     "ts": "tsc -p tsconfig.json",
     "ts-files": "tsc --listFiles -p tsconfig.json",
+    "ts-coverage": "shx mkdir -p .coverage/typescript && typescript-coverage-report -s -t 98 -o coverage/typescript",
     "codestyle": "prettier --check '**/*'",
     "format": "prettier --write '**/*'",
     "eslint": "eslint '**/*.{js,jsx,ts,tsx}'",
     "lint": "yarn eslint",
-    "qa": "yarn ts && yarn lint && yarn codestyle",
+    "circular": "yarn madge src --circular",
+    "qa": "yarn ts && yarn lint && yarn codestyle && yarn circular",
     "fix": "yarn eslint --fix"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
   },
   "devDependencies": {
     "@arkweid/lefthook": "^0.7.6",
@@ -46,12 +33,14 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "@types/eslint": "^7.28.0",
-    "@types/jest": "^26.0.15",
+    "@types/jest": "^26.0.24",
     "@types/node": "^12.0.0",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "@typescript-eslint/eslint-plugin": "^4.28.3",
     "@typescript-eslint/parser": "^4.28.3",
+    "cross-env": "^7.0.3",
+    "dotenv": "^10.0.0",
     "eslint": "^7.30.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-airbnb-typescript": "^12.3.1",
@@ -67,10 +56,14 @@
     "eslint-plugin-react-hooks": "^4",
     "eslint-plugin-simple-import-sort": "^7.0.0",
     "eslint-plugin-unicorn": "^34.0.1",
+    "madge": "^5.0.1",
     "prettier": "2.3.2",
     "prettier-plugin-solidity": "1.0.0-beta.15",
     "prettier-plugin-toml": "0.3.1",
     "react-scripts": "4.0.3",
-    "typescript": "^4.3.5"
+    "serve": "^12.0.0",
+    "shx": "^0.3.3",
+    "typescript": "^4.3.5",
+    "typescript-coverage-report": "^0.6.0"
   }
 }

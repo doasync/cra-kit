@@ -67,6 +67,8 @@ const config = {
         'unicorn/prefer-module': 'off',
         'simple-import-sort/imports': 'off',
         'import/order': ['error', { 'newlines-between': 'always' }],
+        '@typescript-eslint/no-require-imports': 'off',
+        '@typescript-eslint/no-var-requires': 'off',
       },
     },
   ],

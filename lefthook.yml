@@ -6,9 +6,11 @@ pre-commit:
     yarn:
       run: yarn
     tsc:
-      run: tsc -p tsconfig.json
+      run: yarn ts
     eslint:
       glob: '*.{js,jsx,ts,tsx}'
       run: eslint --fix {staged_files}
     prettier:
       run: prettier --write {staged_files}
+    madge:
+      run: yarn circular

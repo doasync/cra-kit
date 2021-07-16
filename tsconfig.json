@@ -11,18 +11,16 @@
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
-    "module": "commonjs",
+    "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "downlevelIteration": true,
-    "outDir": ".typescript",
+    "outDir": "typescript",
     "noEmit": true,
     "jsx": "react-jsx",
     "baseUrl": "./",
-    "paths": {
-      "~/*": ["src/*"]
-    }
+    "isolatedModules": true
   },
   "include": ["./", ".*.js"],
-  "exclude": ["node_modules", "build"]
+  "exclude": ["node_modules", "build", "coverage"]
 }

@@ -1,22 +1,18 @@
-# TypeScript
-.typescript
-
 # Dependencies
 node_modules
 
 # Build files
 build
+coverage
+typescript
+
+# IDE
+.idea
+.vscode
 
 # Misc
 .husky
-.coverage
 .temp
 .npm
 .cache
 .*-cache
-
-# VSCode
-.vscode
-
-# WebStorm
-.idea
