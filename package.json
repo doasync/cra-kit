@@ -1,7 +1,13 @@
 {
-  "name": "davinci-app",
-  "version": "0.1.0",
-  "private": true,
+  "name": "cra-kit",
+  "version": "1.0.0",
+  "description": "Create React App with code-quality tools",
+  "author": "doasync",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/doasync/cra-kit.git"
+  },
   "dependencies": {
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -13,19 +19,20 @@
   },
   "scripts": {
     "start": "cross-env NODE_ENV=development react-scripts start",
-    "build": "cross-env NODE_ENV=production react-scripts build",
-    "test": "cross-env NODE_ENV=test react-scripts test",
-    "ts": "tsc -p tsconfig.json",
-    "ts-files": "tsc --listFiles -p tsconfig.json",
-    "ts-coverage": "shx mkdir -p .coverage/typescript && typescript-coverage-report -s -t 98 -o coverage/typescript",
-    "codestyle": "prettier --check '**/*'",
-    "format": "prettier --write '**/*'",
-    "eslint": "eslint '**/*.{js,jsx,ts,tsx}'",
-    "stylelint": "stylelint '**/*.{css,scss,html,js,jsx,ts,tsx}'",
+    "build": "cross-env NODE_ENV=production react-scripts build && serve -s build",
+    "test": "cross-env NODE_ENV=test react-scripts test --watchAll=false",
+    "qa": "yarn ts && yarn lint && yarn codestyle && yarn deps && yarn test",
     "fix": "yarn eslint --fix && yarn stylelint --fix",
     "lint": "yarn eslint && yarn stylelint",
-    "circular": "yarn madge src --circular",
-    "qa": "yarn ts && yarn lint && yarn codestyle && yarn circular"
+    "eslint": "eslint '**/*.{js,jsx,ts,tsx}'",
+    "stylelint": "stylelint '**/*.{css,scss,html,js,jsx,ts,tsx}'",
+    "format": "prettier --write '**/*'",
+    "codestyle": "prettier --check '**/*'",
+    "deps": "yarn madge src --circular",
+    "ts": "tsc -p tsconfig.json",
+    "ts-files": "tsc --listFiles -p tsconfig.json",
+    "ts-cov": "shx mkdir -p coverage/typescript && typescript-coverage-report -s -t 98 -o coverage/typescript",
+    "test-cov": "yarn test --coverage"
   },
   "devDependencies": {
     "@arkweid/lefthook": "^0.7.6",

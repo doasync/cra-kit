@@ -16,4 +16,6 @@ pre-commit:
     prettier:
       run: prettier --write {staged_files}
     madge:
-      run: yarn circular
+      run: yarn deps
+    jest:
+      run: yarn test --ci --cache --onlyChanged
