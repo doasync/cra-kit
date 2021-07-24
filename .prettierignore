@@ -1,41 +1,17 @@
-# Configs
-.yarnclean
-.editorconfig
-.gitattributes
-.browserslistrc
-.nvmrc
-.madgerc
-
-# Assets
-*.*ignore
-*.ico
-*.jpg
-*.png
-*.gif
-*.svg
-*.woff2
-*.ttf
-*.txt
-*.pb
+# tsconfig is formatted by CRA
+tsconfig.json
 
 # Dependencies
 node_modules
-
-# DotEnv
-.env
-
-# Lock files
-package-lock.json
-yarn.lock
-
-# IDE
-.vscode
-.idea
 
 # Build files
 build
 coverage
 typescript
+
+# IDE
+.idea
+.vscode
 
 # Misc
 .husky
@@ -43,17 +19,3 @@ typescript
 .npm
 .cache
 .*-cache
-
-# System
-*.DS_Store
-.AppleDouble
-.LSOverride
-Thumbs.db
-ehthumbs.db
-*.lnk
-
-# Logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*

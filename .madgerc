@@ -8,6 +8,6 @@
   "excludeRegExp": [
     ".(ico|jpg|png|gif|woff2|svg|ttf|txt|json|css|scss)$"
   ],
-  "tsConfig": "tsconfig.json",
+  "tsConfig": "tsconfig.base.json",
   "layout": "dot"
 }

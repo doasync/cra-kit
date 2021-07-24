@@ -20,5 +20,6 @@ In the project directory, you can run:
 - `yarn deps` - search for circular dependencies
 - `yarn ts` - run TypeScrypt checks
 - `yarn ts-files` - list TypeScrypt files
-- `yarn ts-coverage` - show type coverage
-- `yarn test-coverage` - show test coverage
+- `yarn ts-cov` - show type coverage
+- `yarn test-cov` - show test coverage
+- `yarn precommit` - run pre-commit git hooks
